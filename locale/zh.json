@@ -1,0 +1,1 @@
+{ "meta": { "title": "ws-scrcpy-web", "description": "把 ws-scrcpy-web 安卓投屏服务接入 DSH：侧栏入口直接显示服务控制台，Agent 工具可查询服务状态、列出设备并生成独立画面链接。只需配置服务地址，不依赖本机 adb，服务可部署在任意机器（含 Linux ARM）。" } }

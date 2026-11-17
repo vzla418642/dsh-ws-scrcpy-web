@@ -1,0 +1,8 @@
+# dsh-ws-scrcpy-web：Host 工具 + Client 主面板。
+# 唯一配置是 ws-scrcpy-web 服务地址；状态、设备列表、画面链接全部由该服务通过
+# HTTP/WebSocket 提供，不使用本机 adb 或进程，因此服务可以部署在远程（含 Linux ARM）。
+- insert:
+    - id: dsh-ws-scrcpy-web
+      name: 'dsh-ws-scrcpy-web'
+      config:
+        baseUrl: 'http://localhost:6902'

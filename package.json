@@ -1,0 +1,33 @@
+{
+  "name": "dsh-ws-scrcpy-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "把 ws-scrcpy-web 安卓投屏服务接入 DSH：侧栏入口直接显示服务控制台，Agent 工具可查询服务状态、列出设备并生成独立画面链接。只需配置服务地址，不依赖本机 adb，服务可部署在任意机器（含 Linux ARM）。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./favicon.png"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "define-tool.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/en.json",
+    "locale/zh.json",
+    "favicon.png"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  },
+  "license": "GPL-3.0-only"
+}
